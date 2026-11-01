@@ -1,0 +1,22 @@
+THE VANITY local photo-text recognition runtime
+
+Tesseract.js 7.0.0: https://github.com/naptha/tesseract.js
+worker.min.js from npm tesseract.js@7.0.0/dist
+Apache License 2.0: LICENSE-tesseract-js.txt
+Bundled third-party notices: worker.min.js.LICENSE.txt
+
+Tesseract.js-core 6.1.2: https://github.com/naptha/tesseract.js-core
+tesseract-core-lstm.wasm.js from npm tesseract.js-core@6.1.2
+Apache License 2.0: LICENSE-tesseract-core.txt
+Scalar LSTM build selected to support browsers without SIMD.
+
+Tesseract fast language models (English and Korean):
+https://github.com/tesseract-ocr/tessdata_fast
+Commit 87416418657359cb625c412a48b6e1d6d41c29bd
+eng.traineddata, kor.traineddata; gzip -n compression, model contents unchanged.
+Apache License 2.0: LICENSE-tessdata.txt
+
+Runtime files and language models are served from this app's own origin.
+Only loaded when the user selects a product photo; no runtime CDN dependency.
+Product photos and recognized text are not uploaded to an OCR service.
+These files recognize text, not packaging identity or product safety.
